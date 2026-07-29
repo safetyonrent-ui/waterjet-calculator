@@ -1,87 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Waterjet Calculator</title>
+<title>Waterjet Calculator Pro</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
+<header>
+
 <h1>Waterjet Calculator</h1>
+
+<p>Professional Fabric Cost Calculator</p>
+
+</header>
+
 
 <div class="tabs">
 
-<button class="tab active">
+<button class="tab active" id="costTab">
 Cost Calculator
 </button>
 
-<button class="tab">
+<button class="tab" id="productionTab">
 Production
 </button>
 
 </div>
 
+
+
+<!-- ===========================
+COST CALCULATOR
+=========================== -->
+
+<div id="costPage">
+
+<!-- ===========================
+WARP
+=========================== -->
+
 <div class="card">
 
 <h2>Warp</h2>
 
-<input type="number" placeholder="Tar">
+<div class="grid">
 
-<input type="number" placeholder="Denier">
+<input
+type="number"
+id="warpTar1"
+placeholder="Tar">
 
-<input type="number" value="110">
+<input
+type="number"
+id="warpDenier1"
+placeholder="Denier">
 
-<input type="number" placeholder="Rate">
+<input
+type="number"
+id="warpMeter1"
+value="110"
+placeholder="Meter">
+
+<input
+type="number"
+id="warpRate1"
+placeholder="Rate">
+
+
+
+<input
+type="number"
+id="warpTar2"
+placeholder="Tar">
+
+<input
+type="number"
+id="warpDenier2"
+placeholder="Denier">
+
+<input
+type="number"
+id="warpMeter2"
+value="110"
+placeholder="Meter">
+
+<input
+type="number"
+id="warpRate2"
+placeholder="Rate">
+
+
+
+<input
+type="number"
+id="warpTar3"
+placeholder="Tar">
+
+<input
+type="number"
+id="warpDenier3"
+placeholder="Denier">
+
+<input
+type="number"
+id="warpMeter3"
+value="110"
+placeholder="Meter">
+
+<input
+type="number"
+id="warpRate3"
+placeholder="Rate">
+
+
+
+<input
+type="number"
+id="warpTar4"
+placeholder="Tar">
+
+<input
+type="number"
+id="warpDenier4"
+placeholder="Denier">
+
+<input
+type="number"
+id="warpMeter4"
+value="110"
+placeholder="Meter">
+
+<input
+type="number"
+id="warpRate4"
+placeholder="Rate">
 
 </div>
+
+</div>
+
+
+
+
+<!-- ===========================
+WEFT
+=========================== -->
 
 <div class="card">
 
 <h2>Weft</h2>
 
-<input type="number" placeholder="Pick">
+<div class="grid">
 
-<input type="number" placeholder="Denier">
+<input
+type="number"
+id="pick1"
+placeholder="Pick">
 
-<input type="number" placeholder="Pano">
+<input
+type="number"
+id="weftDenier1"
+placeholder="Denier">
 
-<input type="number" placeholder="Rate">
+<input
+type="number"
+id="pano1"
+placeholder="Pano">
 
-<input type="number" placeholder="Pick Charge">
+<input
+type="number"
+id="weftRate1"
+placeholder="Rate">
+
+<input
+type="number"
+id="pickCharge1"
+placeholder="Pick Charge">
+
+
+
+<input
+type="number"
+id="pick2"
+placeholder="Pick">
+
+<input
+type="number"
+id="weftDenier2"
+placeholder="Denier">
+
+<input
+type="number"
+id="pano2"
+placeholder="Pano">
+
+<input
+type="number"
+id="weftRate2"
+placeholder="Rate">
+
+<input
+type="number"
+id="pickCharge2"
+placeholder="Pick Charge">
+<input
+type="number"
+id="pick3"
+placeholder="Pick">
+
+<input
+type="number"
+id="weftDenier3"
+placeholder="Denier">
+
+<input
+type="number"
+id="pano3"
+placeholder="Pano">
+
+<input
+type="number"
+id="weftRate3"
+placeholder="Rate">
+
+<input
+type="number"
+id="pickCharge3"
+placeholder="Pick Charge">
+
+
+
+<input
+type="number"
+id="pick4"
+placeholder="Pick">
+
+<input
+type="number"
+id="weftDenier4"
+placeholder="Denier">
+
+<input
+type="number"
+id="pano4"
+placeholder="Pano">
+
+<input
+type="number"
+id="weftRate4"
+placeholder="Rate">
+
+<input
+type="number"
+id="pickCharge4"
+placeholder="Pick Charge">
 
 </div>
 
-<button class="calculate">
+</div>
+
+
+
+<button
+class="calculate"
+id="calculateBtn">
 
 Calculate
 
 </button>
 
-<div class="result">
+
+
+<div class="card">
 
 <h2>Result</h2>
 
-<p>Warp Weight</p>
+<div class="result-grid">
 
-<p>Warp Cost</p>
+<div class="result-box">
+<label>Warp Weight</label>
+<span id="warpWeight">0.00</span>
+</div>
 
-<p>Weft Weight</p>
+<div class="result-box">
+<label>Warp Cost</label>
+<span id="warpCost">0.00</span>
+</div>
 
-<p>Weft Cost</p>
+<div class="result-box">
+<label>Weft Weight</label>
+<span id="weftWeight">0.00</span>
+</div>
 
-<p>Total Weight</p>
+<div class="result-box">
+<label>Weft Cost</label>
+<span id="weftCost">0.00</span>
+</div>
 
-<p>Yarn Cost</p>
+<div class="result-box">
+<label>Total Pick</label>
+<span id="totalPick">0.00</span>
+</div>
 
-<p>Net Rate</p>
+<div class="result-box">
+<label>Total Weight</label>
+<span id="totalWeight">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Quality Weight</label>
+<span id="qualityWeight">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Total</label>
+<span id="totalCost">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Yarn Cost</label>
+<span id="yarnCost">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Wastage</label>
+<span id="wastage">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Pick Charge</label>
+<span id="pickChargeTotal">0.00</span>
+</div>
+
+<div class="result-box">
+<label>Quality</label>
+<span id="quality">0.00</span>
+</div>
+
+<div class="result-box net">
+
+<label>Net Rate</label>
+
+<span id="netRate">
+
+0.00
+
+</span>
 
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ===========================
+PRODUCTION PAGE
+=========================== -->
+
+<div
+id="productionPage"
+style="display:none;">
+
+<div class="card">
+
+<h2>Production Calculator</h2>
+
+<input
+type="number"
+id="rpm"
+placeholder="RPM">
+
+<input
+type="number"
+id="pick"
+placeholder="Pick">
+
+<input
+type="number"
+id="efi"
+placeholder="EFI %">
+
+<button
+class="calculate"
+id="productionBtn">
+
+Calculate Production
+
+</button>
+
+<div class="productionResult">
+
+<h2>
+
+Production
+
+</h2>
+
+<h1 id="productionValue">
+
+0.00
+
+</h1>
+
+<p>
+
+MTR / DAY
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+<footer>
+
+<p>
+
+Waterjet Calculator Pro v1.0
+
+</p>
+
+</footer>
 
 </div>
 
